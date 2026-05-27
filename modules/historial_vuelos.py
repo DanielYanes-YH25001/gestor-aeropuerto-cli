@@ -3,6 +3,7 @@ from classes.EventoHistorial import EventoHistorial
 from utils import validar_entrada
 from datetime import datetime
 
+
 # Devuelve la fecha y la hora actual en un formato legible
 def obtener_fecha_hora_actual():
   now = datetime.now()
@@ -13,6 +14,7 @@ def obtener_fecha_hora_actual():
     "fecha": fecha,
     "hora": hora
   }
+
 
 # Menú para consultar o agregar eventos al historial de vuelos
 def menu_historial_vuelos():
@@ -30,8 +32,8 @@ def menu_historial_vuelos():
       if not datos.historial_vuelos:
         print("Historial vacío.")
       else:
-        for evento in datos.historial_vuelos:
-          print(f"ID: {evento.id} | Descripción: {evento.descripcion} | Fecha: {evento.fecha} | Hora: {evento.hora}")
+        for i, evento in enumerate(datos.historial_vuelos):
+          print(f"ID: {i + 1} | Descripción: {evento.descripcion} | Fecha: {evento.fecha} | Hora: {evento.hora}")
     
     elif opcion == "2":
       descripcion_evento = validar_entrada("Ingrese la descripción del evento: ")
