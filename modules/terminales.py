@@ -1,18 +1,22 @@
-from datos import nodo_aerouperto
-from classes.NodoTerminal import NodoTerminal
+from datos import nodo_aeropuerto
+from classes.NodoAeropuerto import NodoAeropuerto
 
-# Imprime las terminales registradas del aeropuerto recursivamente
-def recorrer_terminales(terminales: list[NodoTerminal]):
-  if not terminales:
+
+# Imprime las terminales del aeropuerto recursivamente
+def recorrer_terminales(nodo_aeropuerto: NodoAeropuerto):
+  if nodo_aeropuerto is None:
     return
   
-  print(f"Terminal: {terminales[0].nombre}")
-  recorrer_terminales(terminales[1:])
+  if nodo_aeropuerto.tipo == "aeropuerto":
+    print(f"Aeropuerto: {nodo_aeropuerto.nombre}")
+  else:
+    print(f"Terminal: {nodo_aeropuerto.nombre}")
+
+  for hijo in nodo_aeropuerto.hijos:
+    recorrer_terminales(hijo)
+
 
 # Menú para mostrar la información de las terminales
 def menu_terminales():
   print("--- TERMINALES DEL AEROPUERTO ---")
-  print(f"Aeropuerto: {nodo_aerouperto.nombre}")
-
-  terminales = nodo_aerouperto.hijos
-  recorrer_terminales(terminales)
+  recorrer_terminales(nodo_aeropuerto)

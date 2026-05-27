@@ -1,7 +1,7 @@
 from collections import deque
 from classes.NodoAeropuerto import NodoAeropuerto
-from classes.NodoTerminal import NodoTerminal
 from classes.GrafoRutas import GrafoRutas
+
 
 # Listas globales para almacenar los datos del aeropuerto
 pasajeros = deque()
@@ -14,10 +14,10 @@ id_evento_historial_actual = 1
 id_asiento_actual = 1
 
 # Inicialización del nodo aeropuerto y sus nodos terminales
-nodo_aerouperto = NodoAeropuerto("Aeropuerto Internacional San Óscar Arnulfo Romero y Galdámez")
-nodo_terminal1 = NodoTerminal("Pasajeros")
-nodo_terminal2 = NodoTerminal("Carga")
-nodo_aerouperto.agregar_nodos([nodo_terminal1, nodo_terminal2])
+nodo_aeropuerto = NodoAeropuerto("Aeropuerto Internacional San Óscar Arnulfo Romero y Galdámez")
+nodo_terminal1 = NodoAeropuerto("Pasajeros", "terminal")
+nodo_terminal2 = NodoAeropuerto("Carga", "terminal")
+nodo_aeropuerto.agregar_nodos([nodo_terminal1, nodo_terminal2])
 
 # Grafo que guarda las rutas disponibles para un vuelo en particular
 grafo = GrafoRutas()
