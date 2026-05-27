@@ -2,6 +2,7 @@ import datos
 from classes.Pasajero import Pasajero
 from utils import validar_entrada
 
+
 # Menú para visualizar y registrar pasajeros
 def menu_pasajeros():
   while True:

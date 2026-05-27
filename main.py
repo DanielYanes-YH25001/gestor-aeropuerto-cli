@@ -1,5 +1,6 @@
 from modules import pasajeros, historial_vuelos, asientos_pasajeros, terminales, rutas_vuelos
 
+
 # Función principal que muestra el menú y redirige a cada sección
 def main():
   while True:
@@ -39,6 +40,7 @@ def main():
 
     else:
       print("Opción inválida. Por favor, seleccione de las opciones.")
+
 
 # Punto de entrada del programa; evita que la función principal
 # se ejecute si este archivo no se ejecuta directamente

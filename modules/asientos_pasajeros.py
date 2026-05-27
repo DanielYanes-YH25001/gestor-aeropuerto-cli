@@ -1,6 +1,7 @@
 import datos
 from classes.NodoAsiento import NodoAsiento
 
+
 # Recorre la lista enlazada de asientos e imprime sus datos
 def recorrer_asientos(nodo_inicial: NodoAsiento):
   print("--- ASIENTOS DE VUELO ---")
@@ -8,6 +9,7 @@ def recorrer_asientos(nodo_inicial: NodoAsiento):
     pasajero = nodo_inicial.pasajero
     print(f"N° Asiento: {nodo_inicial.n_asiento} | Nombre: {pasajero.nombre} | N° Vuelo {pasajero.n_vuelo}")
     nodo_inicial = nodo_inicial.next
+
 
 # Menú que crea la lista de asientos enlazados para los pasajeros
 def menu_asientos_pasajeros():
@@ -32,4 +34,3 @@ def menu_asientos_pasajeros():
     recorrer_asientos(datos.lista_asientos[0])
   except IndexError:
     print("Error: No hay pasajeros en vuelo.")
-    

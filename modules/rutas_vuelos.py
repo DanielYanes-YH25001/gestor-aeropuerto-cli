@@ -1,5 +1,6 @@
 from datos import grafo
 
+
 # Menú para presentar rutas de vuelo disponibles
 def menu_rutas_vuelos():
   print("--- RUTAS DE VUELOS ---")
