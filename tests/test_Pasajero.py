@@ -1,6 +1,7 @@
 from classes.Pasajero import Pasajero
 import unittest
 
+
 class TestPasajero(unittest.TestCase):
     
     # Prueba para verificar que los atributos del pasajero se asignan correctamente
@@ -19,6 +20,7 @@ class TestPasajero(unittest.TestCase):
         self.assertNotEqual(p1.id, p2.id)
         self.assertNotEqual(p1.nombre, p2.nombre)
         self.assertNotEqual(p1.n_vuelo, p2.n_vuelo)
+        
         
 if __name__ == "__main__":
     unittest.main()

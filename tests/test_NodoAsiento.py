@@ -2,6 +2,7 @@ from classes.NodoAsiento import NodoAsiento
 import unittest
 from classes.Pasajero import Pasajero
 
+
 class TestNodoAsiento(unittest.TestCase):
     
     # Verifica que al crear un nodo, next empieza en None
@@ -57,6 +58,7 @@ class TestNodoAsiento(unittest.TestCase):
         
         # Desde nodo1 se recorre hasta nodo3
         self.assertEqual(nodo1.next.next.pasajero.nombre, "Katherine Santos")
+        
         
 if __name__ == '__main__':
     unittest.main()

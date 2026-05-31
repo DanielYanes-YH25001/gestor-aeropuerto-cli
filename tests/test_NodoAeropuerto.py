@@ -1,6 +1,7 @@
 from classes.NodoAeropuerto import NodoAeropuerto
 import unittest
 
+
 class TestNodoAeropuerto(unittest.TestCase):
     
     # Verifica que el tipo por defecto de unu nodo es "aeropuerto"
@@ -45,6 +46,7 @@ class TestNodoAeropuerto(unittest.TestCase):
         terminal = NodoAeropuerto("Terminal pasajeros", "terminal")
         
         self.assertEqual(terminal.tipo, "terminal") 
+        
         
 if __name__ == '__main__':
     unittest.main()

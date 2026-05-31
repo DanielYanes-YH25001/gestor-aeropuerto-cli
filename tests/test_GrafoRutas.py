@@ -1,6 +1,7 @@
 from classes.GrafoRutas import GrafoRutas
 import unittest
 
+
 class TestGrafoRuta(unittest.TestCase):
     
     # Verifica que al agregar una arista, ambos aeropuertos se registren en el grafo
@@ -29,6 +30,7 @@ class TestGrafoRuta(unittest.TestCase):
         
         # El aeropuerto SAL debe tener dos destinos registrados
         self.assertEqual(len(grafo.grafo["SAL"]), 2)
+        
         
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,7 @@
 from classes.EventoHistorial import EventoHistorial
 import unittest
 
+
 class TestEventoHistorial(unittest.TestCase):
     
     # Prueba para verificar que los atributos del evento se asignan correctamente
@@ -21,6 +22,7 @@ class TestEventoHistorial(unittest.TestCase):
         self.assertNotEqual(e1.descripcion, e2.descripcion)
         self.assertNotEqual(e1.fecha, e2.fecha)
         self.assertNotEqual(e1.hora, e2.hora)
+        
         
 if __name__ == "__main__":
     unittest.main()
